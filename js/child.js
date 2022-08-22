@@ -1,6 +1,5 @@
 
 
-
 document.getElementById('btn-item1').addEventListener('click', function () {
 
     const listContainer = document.getElementById('list-container');
@@ -44,13 +43,61 @@ document.getElementById('btn-item5').addEventListener('click', function () {
     const li5 = document.createElement('li');
     li5.innerText = 'Kylian mbappé';
     listContainer.appendChild(li5);
+
+
+
+
+
+
+    document.getElementById('btn-item6').addEventListener('click', function () {
+
+        const listContainer = document.getElementById('list-container');
+        const li6 = document.createElement('li');
+        li6.innerText = 'Adama Traore';
+        listContainer.appendChild(li6);
+    })
+
+
+
+
 })
 
 
-document.getElementById('btn-item6').addEventListener('click', function () {
+function disabled1Function() {
+    const x = document.getElementById("btn-item1");
+    x.disabled = true;
+}
 
-    const listContainer = document.getElementById('list-container');
-    const li6 = document.createElement('li');
-    li6.innerText = 'Adama Traore';
-    listContainer.appendChild(li6);
-})
+function disabled2Function() {
+    const x = document.getElementById("btn-item2");
+    x.disabled = true;
+}
+
+
+function disabled3Function() {
+    const x = document.getElementById("btn-item3");
+    x.disabled = true;
+}
+
+
+function disabled4Function() {
+    const x = document.getElementById("btn-item4");
+    x.disabled = true;
+}
+
+
+function disabled5Function() {
+    const x = document.getElementById("btn-item5");
+    x.disabled = true;
+}
+
+
+function disabled6Function() {
+    const x = document.getElementById("btn-item6");
+    x.disabled = true;
+}
+
+
+
+
+
