@@ -1,6 +1,6 @@
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
-    const sectectedTextElement = document.getElementById('Total-count');
+    const sectectedTextElement = document.getElementById('total-count');
     const sectectedTextElementString = sectectedTextElement.innerText;
     const sectectedTextElementResult = parseFloat(sectectedTextElementString);
 
@@ -15,7 +15,6 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const expensesTextElementResult = parseFloat(expensesTextElementString);
 
     const sumTotalAmount = expensesTextElementResult + newFieldAmount;
-
     expensesTextElement.innerText = sumTotalAmount;
 
     inputFieldElement.value = '';
@@ -24,10 +23,10 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 
 function elementFieldId(fieldId) {
 
-    const inputFieldElement = document.getElementById(fieldId);
-    const inputFieldElementString = inputFieldElement.value;
-    const fieldElementAmount = parseFloat(inputFieldElementString);
-    inputFieldElement.value = '';
+    const FieldElement = document.getElementById(fieldId);
+    const FieldElementString = FieldElement.value;
+    const fieldElementAmount = parseFloat(FieldElementString);
+    FieldElement.value = '';
     return fieldElementAmount;
 }
 
@@ -44,7 +43,6 @@ function inputTextElementId(elementText) {
 
 
 function getElementById(element, newValue) {
-
     const inputTextElement = document.getElementById(element);
 
     inputTextElement.innerText = newValue;
@@ -53,17 +51,13 @@ function getElementById(element, newValue) {
 document.getElementById('btn-total').addEventListener('click', function () {
 
     const managerTotalAmount = elementFieldId('manager-amount');
-
     const coachTotalAmount = elementFieldId('coach-amount');
-
     const sumElementTotalAmount = inputTextElementId('sum-amount');
 
 
     const totalAmount = managerTotalAmount + coachTotalAmount + sumElementTotalAmount;
-
     const sumTotalAvarge = inputTextElementId('total-avarge');
 
     const avarge = totalAmount + sumTotalAvarge;
-
     getElementById('total-avarge', avarge);
 })

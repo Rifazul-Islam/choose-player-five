@@ -3,19 +3,17 @@ const playersArray = [];
 
 function display(cardPlayer) {
 
-    console.log(cardPlayer)
-
     const tableBody = document.getElementById('player-list');
     tableBody.innerHTML = '';
 
+    if (cardPlayer.length > 5) {
 
-    if (cardPlayer.length > 4) {
-
-        alert('plese five not allow card');
-
+        alert('Dont allow five over player card !!');
     }
 
+
     for (let i = 0; i < cardPlayer.length; i++) {
+
         const name = playersArray[i].playersName;
 
         const tr = document.createElement('tr');
@@ -31,17 +29,18 @@ function display(cardPlayer) {
 
 }
 
-function addplayercard(element) {
+function selectplayercard(element) {
 
     element.disabled = true;
     const playersName = element.parentNode.parentNode.children[0].innerText;
 
     const playerObject = {
         playersName: playersName
+
     }
     playersArray.push(playerObject);
 
-    document.getElementById('Total-count').innerText = playersArray.length;
+    document.getElementById('total-count').innerText = playersArray.length;
 
     display(playersArray);
 }
