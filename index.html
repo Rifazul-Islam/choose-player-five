@@ -8,6 +8,9 @@
     <title>Choose player five</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+
+
 </head>
 
 <body>
@@ -26,8 +29,7 @@
                     <div class="card-body bg-secondary">
                         <h5 class="mt-2 fs-1 text-white">Lionel messi</h5>
                         <div class="mx-auto  text-center">
-                            <button id="btn-item1" onclick="disabled1Function()"
-                                class="btn btn-primary mt-5 w-75 ">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75 ">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -38,8 +40,7 @@
                         <h5 class="mt-2 fs-1 text-white">Mo Salah</h5>
 
                         <div class="mx-auto  text-center">
-                            <button id="btn-item2" onclick="disabled2Function()"
-                                class="btn btn-primary mt-5 w-75">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -50,8 +51,7 @@
                         <h5 class="mt-2 fs-1 text-white"> Ronaldo dos </h5>
 
                         <div class="mx-auto  text-center">
-                            <button id="btn-item3" onclick="disabled3Function()"
-                                class="btn btn-primary mt-5 w-75">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -60,11 +60,16 @@
 
                 <div class=" bg-secondary mt-1">
 
-                    <h1 class="text-center text-white fs-2"> Selected-V</h1>
+                    <h2 class="text-center text-white fs-2"> Selected <span id="Total-count">0</span></h2>
 
-                    <ol id="list-container" class="fs-4 text-white">
+                    <table class="table text-white">
+                        <thead>
 
-                    </ol>
+                        </thead>
+                        <tbody id="player-list">
+
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
@@ -80,8 +85,7 @@
                         <h5 class="mt-2 fs-1 text-white">Mesut Ozil</h5>
 
                         <div class="mx-auto  text-center">
-                            <button id="btn-item4" onclick="disabled4Function()"
-                                class="btn btn-primary mt-5 w-75">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -92,8 +96,7 @@
                         <h5 class="mt-3 fs-2 text-white"> Kylian mbappé</h5>
 
                         <div class="mx-auto  text-center">
-                            <button id="btn-item5" onclick="disabled5Function()"
-                                class="btn btn-primary mt-5 w-75 ">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75 ">SELECT</button>
                         </div>
                     </div>
                 </div>
@@ -104,8 +107,7 @@
                         <h5 class="mt-3 fs-2 text-white">Adama Traore </h5>
 
                         <div class="mx-auto  text-center">
-                            <button id="btn-item6" onclick="disabled6Function()"
-                                class="btn btn-primary mt-5 w-75 ">SELECT</button>
+                            <button onclick="addplayercard(this)" class="btn btn-primary mt-5 w-75 ">SELECT</button>
                         </div>
                     </div>
                 </div>

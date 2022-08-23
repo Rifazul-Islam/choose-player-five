@@ -1,103 +1,48 @@
 
+const playersArray = [];
 
-document.getElementById('btn-item1').addEventListener('click', function () {
+function display(cardPlayer) {
 
-    const listContainer = document.getElementById('list-container');
-    const li = document.createElement('li');
-    li.innerText = 'Linoel messi';
-    listContainer.appendChild(li);
-})
+    console.log(cardPlayer)
 
-
-
-document.getElementById('btn-item2').addEventListener('click', function () {
-
-    const listContainer = document.getElementById('list-container');
-    const li2 = document.createElement('li');
-    li2.innerText = 'Mo Salah';
-    listContainer.appendChild(li2);
-})
+    const tableBody = document.getElementById('player-list');
+    tableBody.innerHTML = '';
 
 
-document.getElementById('btn-item3').addEventListener('click', function () {
+    if (cardPlayer.length > 4) {
 
-    const listContainer = document.getElementById('list-container');
-    const li3 = document.createElement('li');
-    li3.innerText = 'Ronaldo dos';
-    listContainer.appendChild(li3);
-})
+        alert('plese five not allow card');
 
+    }
 
-document.getElementById('btn-item4').addEventListener('click', function () {
+    for (let i = 0; i < cardPlayer.length; i++) {
+        const name = playersArray[i].playersName;
 
-    const listContainer = document.getElementById('list-container');
-    const li4 = document.createElement('li');
-    li4.innerText = 'Mesut Ozil';
-    listContainer.appendChild(li4);
-})
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <th>${i + 1} </th>
+            <td>${name}</td>
+          
+          `;
 
+        tableBody.appendChild(tr);
 
-document.getElementById('btn-item5').addEventListener('click', function () {
+    }
 
-    const listContainer = document.getElementById('list-container');
-    const li5 = document.createElement('li');
-    li5.innerText = 'Kylian mbappé';
-    listContainer.appendChild(li5);
-
-
-
-
-
-
-    document.getElementById('btn-item6').addEventListener('click', function () {
-
-        const listContainer = document.getElementById('list-container');
-        const li6 = document.createElement('li');
-        li6.innerText = 'Adama Traore';
-        listContainer.appendChild(li6);
-    })
-
-
-
-
-})
-
-
-function disabled1Function() {
-    const x = document.getElementById("btn-item1");
-    x.disabled = true;
 }
 
-function disabled2Function() {
-    const x = document.getElementById("btn-item2");
-    x.disabled = true;
+function addplayercard(element) {
+
+    element.disabled = true;
+    const playersName = element.parentNode.parentNode.children[0].innerText;
+
+    const playerObject = {
+        playersName: playersName
+    }
+    playersArray.push(playerObject);
+
+    document.getElementById('Total-count').innerText = playersArray.length;
+
+    display(playersArray);
 }
-
-
-function disabled3Function() {
-    const x = document.getElementById("btn-item3");
-    x.disabled = true;
-}
-
-
-function disabled4Function() {
-    const x = document.getElementById("btn-item4");
-    x.disabled = true;
-}
-
-
-function disabled5Function() {
-    const x = document.getElementById("btn-item5");
-    x.disabled = true;
-}
-
-
-function disabled6Function() {
-    const x = document.getElementById("btn-item6");
-    x.disabled = true;
-}
-
-
-
-
 

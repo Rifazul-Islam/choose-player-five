@@ -1,10 +1,13 @@
 
 document.getElementById('btn-calculate').addEventListener('click', function () {
+    const sectectedTextElement = document.getElementById('Total-count');
+    const sectectedTextElementString = sectectedTextElement.innerText;
+    const sectectedTextElementResult = parseFloat(sectectedTextElementString);
 
     const inputFieldElement = document.getElementById('input-field');
     const inputFieldElementString = inputFieldElement.value;
     const previusFieldAmount = parseFloat(inputFieldElementString);
-    const newFieldAmount = previusFieldAmount * 5;
+    const newFieldAmount = previusFieldAmount * sectectedTextElementResult;
 
 
     const expensesTextElement = document.getElementById('sum-amount');
